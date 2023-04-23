@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: lgtm
-    - run: echo lgtm
+      run: echo lgtm
