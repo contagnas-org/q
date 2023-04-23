@@ -8,4 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: lgtm
-      run: bazelisk --version
+      run: |
+        pwd
+        ls
+        bazelisk --version
