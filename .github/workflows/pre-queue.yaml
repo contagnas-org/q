@@ -1,12 +1,10 @@
 name: pre-queue-check
 run-name: ${{ github.actor }} running pre-queue checks
-on: 
-  pull_request:
-    types: [opened, reopened]
+on: [pull_request]
   
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-      echo LGTM
+    - name: lgtm
+    - run: echo lgtm
