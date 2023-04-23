@@ -1,10 +1,15 @@
 name: pre-queue-check
-run-name: ${{ github.actor }} running pre-queue checks
-on: [pull_request]
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
   
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - name: lgtm
     - run: echo lgtm
